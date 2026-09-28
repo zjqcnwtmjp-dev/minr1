@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECO / PLANET — Глобальные экологические проблемы</title>
+<meta name="description" content="Образовательный проект о глобальных экологических проблемах и путях их решения.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="progress" aria-hidden="true"></div>
+
+<!-- ===== Навигация ===== -->
+<header id="top">
+  <nav class="nav" aria-label="Главное меню">
+    <a class="logo" href="#hero">ECO<span>/</span>PLANET</a>
+    <button class="burger" aria-label="Открыть меню" aria-expanded="false"><i></i><i></i><i></i></button>
+    <ul class="links">
+      <li><a href="#hero">Главная</a></li>
+      <li><a href="#problems">Проблемы</a></li>
+      <li><a href="#causes">Причины</a></li>
+      <li><a href="#effects">Последствия</a></li>
+      <li><a href="#solutions">Решения</a></li>
+      <li><a href="#you">Что можем сделать?</a></li>
+      <li><a href="#sources">Источники</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ===== Hero ===== -->
+<section id="hero" class="hero">
+  <img class="hero-bg" src="https://images.unsplash.com/photo-1446776877081-d282a0f896e2?auto=format&fit=crop&w=1800&q=70" alt="Планета Земля из космоса">
+  <div class="orb o1"></div><div class="orb o2"></div>
+  <div class="hero-in">
+    <p class="eyebrow">Образовательный проект</p>
+    <h1>Глобальные экологические проблемы</h1>
+    <p class="lead">Планета меняется. Наш выбор определяет, каким будет её будущее.</p>
+    <div class="btns"><a class="btn primary" href="#problems">Изучить проблемы</a><a class="btn ghost" href="#solutions">Найти решения</a></div>
+  </div>
+  <a class="scroll" href="#stats">SCROLL TO EXPLORE ↓</a>
+</section>
+
+<!-- ===== Статистика ===== -->
+<section id="stats" class="wrap">
+  <div class="grid4" id="statGrid"></div>
+  <p class="note">Данные приблизительны и зависят от периода и методики; источники — в конце страницы.</p>
+</section>
+
+<!-- ===== Проблемы ===== -->
+<section id="problems" class="wrap">
+  <p class="eyebrow">Обзор</p><h2>Проблемы, которые затрагивают всех</h2>
+  <div class="grid4" id="problemGrid"></div>
+</section>
+
+<!-- ===== Климат ===== -->
+<section id="climate" class="wrap dark">
+  <p class="eyebrow">Изменение климата</p><h2>Планета нагревается</h2>
+  <div class="tabs" id="climateTabs"></div>
+  <ol class="timeline" id="climateTimeline"></ol>
+</section>
+
+<!-- ===== Загрязнение ===== -->
+<section id="pollution" class="wrap">
+  <p class="eyebrow">Загрязнение</p><h2>Воздух, вода, почва</h2>
+  <div class="tabs" id="pollTabs"></div>
+</section>
+
+<!-- ===== Леса ===== -->
+<section id="forests" class="wrap dark">
+  <p class="eyebrow">Леса</p><h2>Леса — лёгкие планеты</h2>
+  <div class="split">
+    <div>
+      <div class="ba" id="ba">
+        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=70" alt="Здоровый лес">
+        <div class="ba-top"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=70" alt="Деградированная экосистема (визуальная иллюстрация)"></div>
+        <span class="ba-line"></span>
+        <span class="tag l">Деградированная</span><span class="tag r">Здоровая</span>
+      </div>
+      <input type="range" id="baRange" min="0" max="100" value="50" aria-label="Сравнить здоровую и деградированную экосистему">
+    </div>
+    <ul class="ticks" id="forestList"></ul>
+  </div>
+</section>
+
+<!-- ===== Биоразнообразие ===== -->
+<section id="bio" class="wrap">
+  <p class="eyebrow">Биоразнообразие</p><h2>Каждый вид имеет значение</h2>
+  <div class="grid3" id="bioGrid"></div>
+</section>
+
+<!-- ===== Пластик ===== -->
+<section id="plastic" class="wrap dark">
+  <p class="eyebrow">Пластик</p><h2>Пластик: удобство с долгими последствиями</h2>
+  <div class="steps" id="plasticSteps"></div>
+  <div class="glass" id="plasticText" aria-live="polite"></div>
+</section>
+
+<!-- ===== Причины ===== -->
+<section id="causes" class="wrap">
+  <p class="eyebrow">Причины</p><h2>Почему это происходит?</h2>
+  <div class="web"><div class="core">Давление на природу</div><div class="chips" id="causeChips"></div></div>
+  <div class="glass" id="causeText" aria-live="polite">Выберите причину, чтобы увидеть связи.</div>
+</section>
+
+<!-- ===== Последствия ===== -->
+<section id="effects" class="wrap dark">
+  <p class="eyebrow">Последствия</p><h2>Три уровня воздействия</h2>
+  <div class="grid3" id="effectGrid"></div>
+</section>
+
+<!-- ===== Решения ===== -->
+<section id="solutions" class="wrap">
+  <p class="eyebrow">Действия</p><h2>Решения существуют</h2>
+  <div class="grid4" id="solutionGrid"></div>
+</section>
+
+<!-- ===== Чек-лист ===== -->
+<section id="you" class="wrap dark">
+  <p class="eyebrow">Практика</p><h2>Что можешь сделать ты?</h2>
+  <div class="split">
+    <div class="glass">
+      <h3 id="checkTitle">Твой экологический чек-лист: 0%</h3>
+      <div class="bar"><b id="checkBar"></b></div>
+      <ul class="checks" id="checkList"></ul>
+    </div>
+    <div class="glass" id="calc">
+      <h3>Калькулятор воздействия</h3>
+      <div id="calcFields"></div>
+      <button class="btn primary" id="calcBtn">Показать оценку</button>
+      <div id="calcOut" aria-live="polite"></div>
+      <p class="note">Это ориентировочная образовательная оценка, а не точный расчёт углеродного следа.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Карта ===== -->
+<section id="map" class="wrap">
+  <p class="eyebrow">География</p><h2>Экологические вызовы мира</h2>
+  <div class="split">
+    <svg viewBox="0 0 800 400" class="map" role="img" aria-label="Стилизованная карта мира" id="mapSvg"></svg>
+    <div class="glass" id="mapInfo" aria-live="polite">Выберите регион на карте. Карта схематична.</div>
+  </div>
+</section>
+
+<!-- ===== Будущее ===== -->
+<section id="future" class="wrap dark">
+  <p class="eyebrow">Сценарии</p><h2>Каким будет будущее?</h2>
+  <p class="lead sm">Сценарии будущего зависят от решений людей, бизнеса и государств.</p>
+  <div class="grid2" id="futureGrid"></div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="wrap narrow">
+  <p class="eyebrow">FAQ</p><h2>Частые вопросы</h2>
+  <div id="faqList"></div>
+</section>
+
+<!-- ===== Источники ===== -->
+<section id="sources" class="wrap">
+  <p class="eyebrow">Проверяйте факты</p><h2>Источники и дополнительная информация</h2>
+  <div class="grid4" id="srcGrid"></div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p class="big">Protecting the planet starts with understanding it.</p>
+    <div class="fcols">
+      <div><b>Навигация</b><a href="#problems">Проблемы</a><a href="#solutions">Решения</a><a href="#you">Что можем сделать?</a></div>
+      <div><b>Источники</b><a href="https://www.ipcc.ch/" target="_blank" rel="noopener">IPCC</a><a href="https://www.unep.org/" target="_blank" rel="noopener">UNEP</a><a href="#sources">Все источники</a></div>
+    </div>
+    <p class="note">© 2026 ECO / PLANET. Образовательный проект.</p>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Наверх">↑ Back to top</button>
+
+<!-- Modal -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle" hidden>
+  <div class="m-card"><button class="m-close" aria-label="Закрыть">×</button><div id="mBody"></div></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
